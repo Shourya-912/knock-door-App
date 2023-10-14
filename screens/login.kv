@@ -1,0 +1,97 @@
+MDScreen:
+    name:"login"
+    MDFloatLayout:
+        md_bg_color: 1,1,1,1
+        MDIconButton:
+            icon:"chevron-left"
+            user_font_size: "35sp"
+            pos_hint: {'center_y': .95}
+            on_release:
+                root.manager.transition.direction= "right"
+                root.manager.current= "main"
+        MDLabel:
+            text:"back"
+            font_size: "18sp"
+            pos_hint: {'center_x':.615, 'center_y':.949}
+        Image:
+            source: "images/logo.png"
+            size_hint: .5,.5
+            pos_hint: {'center_x':.46, 'center_y':.8}
+        MDLabel:
+            text: "Proceed with your "
+            font_size: "22sp"
+            color: 120/225, 120/225, 120/225, 1
+            pos_hint: {'center_x':.6, 'center_y':.65}
+        MDLabel:
+            text: "LOGIN"
+            font_size: "28sp"
+            pos_hint: {'center_x':.6, 'center_y':.60}
+        MDFloatLayout:
+            size_hint:  .79, .08
+            pos_hint: {'center_x':.5, 'center_y':.42}
+
+            TextInput:
+                id: phone
+                hint_text:"Phone No."
+                size_hint_y: 1
+                pos_hint: {'center_x':.49, 'center_y':.4}
+                height: self.minimum_height
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                foreground_color: 120/225, 120/225, 120/225, 1
+                font_size: "17sp"
+                multiline: False
+            Image:
+                source: "images/call.png"
+                pos_hint: {'center_x':.96, 'center_y':.5}
+                size_hint: .3, .3
+            MDFloatLayout:
+                pos_hint: {'center_x':.5, 'center_y':.0}
+                size_hint_y: .03
+                md_bg_color: 120/225, 120/225, 120/225, 1
+        MDFloatLayout:
+            size_hint:  .79, .08
+            pos_hint: {'center_x':.5, 'center_y':.28}
+
+            TextInput:
+                id: password
+                hint_text:"password"
+                size_hint_y: .75
+                pos_hint: {'center_x':.49, 'center_y':.4}
+                background_color: 0,0,0,0
+                cursor_color: 0,0,0,1
+                cursor_width: "2sp"
+                font_size: "17sp"
+                multiline: False
+                password: True
+            Image:
+                source: "images/key.png"
+                pos_hint: {'center_x':.96, 'center_y':.5}
+                size_hint: .5, .5
+            MDFloatLayout:
+                pos_hint: {'center_x':.5, 'center_y':.0}
+                size_hint_y: .03
+                md_bg_color: 120/225, 120/225, 120/225, 1
+        Button:
+            text: "Login"
+            background_color: 0,0,0,0
+            size_hint: .79, .08
+            pos_hint:{'center_x':.5, 'center_y':.15}
+            on_release:
+                root.manager.transition.direction= "right"
+                root.manager.current= "user"
+            canvas.before:
+                Color:
+                    rgb: 30/255, 144/255, 255/255, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [2]
+        MDTextButton:
+            text: " Forget Password? "
+            font_size: "13sp"
+            pos_hint: {'center_x': .5, 'center_y':.07}
+            halign:"center"
+            color: 120/225, 120/225, 120/225, 1
+

@@ -1,0 +1,75 @@
+MDScreen:
+    name:"user"
+    md_bg_color:81/255,46/255,95/255,1
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint_y:.23
+            padding:dp(25)
+
+            MDBoxLayout:
+                orientation:"vertical"
+                MDLabel:
+                    text:"Hey!! " + app.data
+                    font_style:"H4"
+
+                MDBoxLayout:
+                    orientation:"vertical"
+                    MDLabel:
+                        text:"You are in "+ app.area
+                        font_style:"H6"
+
+            MDIconButton:
+                icon:"bell"
+
+        MDGridLayout:
+            size_hint_y:.75
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            spacing:dp(15)
+
+            ElementCard:
+                image:"images/home.jpg"
+                text:app.l1
+                on_release:app.show_dialog()
+
+            ElementCard:
+                image:"images/home.jpg"
+                text:app.l2
+                on_release: app.show_dialog()
+
+            ElementCard:
+                image:"images/home.jpg"
+                text:app.l3
+                on_release: app.show_dialog()
+
+            ElementCard:
+                image:"images/home.jpg"
+                text:'Setting'
+                subtext:'Logout'
+                on_release: app.show_dialog()
+
+<ElementCard@MDCard>:
+    md_bg_color:175/255,122/255, 197/255,1
+    padding:dp(15)
+    spacing:dp(15)
+    radius:dp(25)
+    ripple_behavior: True
+    image:''
+    text:""
+    items_count:""
+    subtext:''
+    orientation:'vertical'
+    Image:
+        source:root.image
+    MDBoxLayout:
+        orientation:'vertical'
+        MDLabel:
+            halign:"center"
+            text:root.text
+            font_style:"H6"
+        MDLabel:
+            halign:"center"
+            font_style:"Caption"
+            text:root.subtext
+

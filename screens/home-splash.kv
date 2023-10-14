@@ -1,0 +1,29 @@
+MDScreen:
+    name:"home-splash"
+    MDFloatLayout:
+        md_bg_color: 15/255, 158/255, 56/255, 1
+        Image:
+            source: "images/knock1.png"
+            size_hint: .22,.22
+            pos_hint: {'center_x': .5, 'center_y':.55}
+            canvas.before:
+                Color:
+                    rgb: 1,1,1,1
+                Ellipse:
+                    size: 132 ,132
+                    pos: 110, 254
+    MDLabel:
+        text: "KNOCK"
+        pos_hint: {'center_x': .5, 'center_y':.2}
+        halign: "center"
+        theme_text_color: "Custom"
+        text_color: 1,1,1,1
+        font_size: "35sp"
+
+    MDLabel:
+        text: "@Door"
+        pos_hint: {'center_x': .5, 'center_y':.15}
+        halign: "center"
+        theme_text_color: "Custom"
+        text_color: 1,1,1,1
+        font_size: "13sp"

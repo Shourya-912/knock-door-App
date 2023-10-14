@@ -1,0 +1,469 @@
+
+MDScreen:
+    name:"reg_user"
+    MDTopAppBar:
+        title:'    Register as User'
+        pos_hint:{'top':1}
+        #md_bg_color: [.2,0,1,.9]
+        elevation:0
+        #left_action_items: [["arrow-left", lambda x: app.callback()]]
+        #right_action_items: [["dots-vertical", lambda x: app.dropdown.open(x)]]
+    MDFloatLayout:
+        BoxLayout:
+            pos_hint: {"center_x": .5, "center_y": .37}
+            ScrollView:
+                BoxLayout:
+                    orientation: "vertical"
+                    size_hint_y: .79
+
+                    MDGridLayout:
+                        cols: 1
+                        row_default_height: (self.width - self.cols*self.spacing[0]) / self.cols
+                        row_force_default: True
+                        adaptive_height: True
+                        padding: dp(10), dp(5)
+                        spacing: dp(8),dp(1)
+
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: 'account'
+                            markup: True
+                        TextInput:
+                            id: a
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* First Name"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                        TextInput:
+                            id: b
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Last Name"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: 'phone'
+                            markup: True
+                        TextInput:
+                            id: c
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Phone No."
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                        TextInput:
+                            id: d
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Aadhar No."
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: ''
+                            markup: True
+                        TextInput:
+                            id: m
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* item1"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+
+                        TextInput:
+                            id: n
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* item2"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: ''
+                            markup: True
+                        TextInput:
+                            id: o
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* item3"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+
+
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: 'map-marker'
+                            markup: True
+                        TextInput:
+                            id: g
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Locality 1"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+
+                        TextInput:
+                            id: h
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Locality 2"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: ''
+                            markup: True
+                        TextInput:
+                            id: i
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Locality 3"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                        TextInput:
+                            id: f
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Area"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: ''
+                            markup: True
+                        TextInput:
+                            id: e
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* City (Bhopal)"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: ''
+                            markup: True
+
+                        TextInput:
+                            id: j
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "Pincode"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: 'key'
+                            markup: True
+                        TextInput:
+                            id: k
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Password"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+
+                    BoxLayout:
+                        MDIconButton:
+                            #size_hint: .4, .05
+                            pos_hint: {"center_x": .3, "top": .975}
+                            theme_text_color: "Custom"
+                            text_color: [0,0,0,.8]
+                            icon: 'lock'
+                            markup: True
+                        TextInput:
+                            id: l
+                            height: dp(40)
+                            pos_hint: {"center_x": .4, "top": .975}
+                            hint_text_color: [0,0,0, 1]
+                            foreground_color: [0,0,0,.4]
+                            hint_text: "* Confirm password"
+                            background_color: [1,1,1,0]
+                            background_image: ""
+                            background_normal: ""
+                            background_active: ""
+                            multiline: False
+                            size_hint: .5 ,None #.06
+                            canvas.after:
+                                Color:
+                                    rgba: [0.0039,0.1921,0.2078,1]
+                                Line:
+                                    width: dp(0.5)
+                                    rounded_rectangle:
+                                        (self.x, self.y, self.width-dp(20), dp(43),\
+                                        dp(8),dp(8),dp(8),dp(8),\
+                                        dp(50))
+    MDFloatLayout:
+        spacing: dp(30)
+        FloatLayout:
+            MDRaisedButton:
+                text: "SUBMIT"
+                size_hint_x:.4
+                pos_hint: {'center_x':.5, 'center_y':.05}
+                halign: "center"
+                on_release:
+                    app.user_info(a,b,c,d,h,i,j,k,l,m,n,o,e,f,g)
+                    root.manager.transition.direction= "right"
+                    root.manager.current= "user"
+                    app.user_page(c)
+
+    MDFloatLayout:
+        MDIconButton:
+            icon: "arrow-left"
+            theme_text_color: "Custom"
+            text_color: 0,0,0,1
+            pos_hint: {'center_y': .94}
+            on_release:
+                root.manager.transition.direction= "right"
+                root.manager.current= "register"
+
+
+

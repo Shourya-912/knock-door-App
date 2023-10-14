@@ -1,0 +1,41 @@
+MDScreen:
+    name="c_home"
+    MDScreen:
+    MDBoxLayout:
+        orientation:"vertical"
+        MDBoxLayout:
+            orientation:"vertical"
+            adaptive_height:True
+            MDBoxLayout:
+                size_hint_y:None
+                height:dp(65)
+                AnchorLayout:
+                    anchor_y:'top'
+                    anchor_x:'left'
+                    MDIconButton:
+                        icon:"arrow-left"
+                AnchorLayout:
+                    anchor_y:'top'
+                    anchor_x:'right'
+                    MDBoxLayout:
+                        adaptive_size:True
+                        MDIconButton:
+                            icon:"magnify"
+                        MDIconButton:
+                            icon:"cart"
+            MDBoxLayout:
+                size_hint_y:None
+                height:dp(55)
+                spacing:dp(12)
+                padding:dp(12)
+                TabCard:
+                    icon:'shoe-sneaker'
+                    text:"shoes"
+                    md_bg_color:app.theme_cls.primary_color
+                TabCard:
+                    icon:'tshirt-crew'
+                    text:"T shirt"
+                TabCard:
+                    icon:'redhat'
+                    text:"hat"
+

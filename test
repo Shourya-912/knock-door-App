@@ -1,0 +1,73 @@
+# def func(n):
+#     # x=97+n
+#     for i in range(97,98+n,2):
+#         for j in range(97,i+1):
+#             print(chr(j), end="")
+#         # x+=2
+#         print("\n")
+#     print(end="")
+#     z=96+n
+#     for i in range(97,97+n): 
+#         if n%2==0:  
+#             for k in range(97,z):
+#                 print(chr(k), end="")
+#             z-=2
+#             print("\n")
+#         else:
+#             for k in range(97,z-1):
+#                 print(chr(k), end="")
+#             z-=2
+#             print("\n")
+
+
+# func(n)
+# n.extend
+# class Pattern:
+#     def pat(self, n,row):
+#         count=1
+#         while count<=n:
+#             for i in range(row):
+#                 if count<=n:
+#                     print(count, end="")
+#                     count+=1
+#                 else:
+#                     break
+#             print('\n')
+        
+# n = int(input("enter the range for numeric pattern : "))
+# row=int(input("enter the number of rows :"))
+
+
+# p=Pattern()
+# p.pat(n,row)
+# x=""
+# alpha = {}  
+# t = 1
+# for i in range(97, 123):
+#     alpha[chr(i)] = t
+#     t += 1
+# s="hvmhoasabaymnmsd"
+# for j in s:
+#     x += str(alpha.get(j,''))
+# print(x)
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.link= None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def print_ll(self):
+        if self.head is None:
+            print("LL is empty")
+        else:
+            n= self.head
+            while n is not None:
+                print(n.data)
+                n= n.ref
+
+LL= LinkedList()
+LL.print_ll()
